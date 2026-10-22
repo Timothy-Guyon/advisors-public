@@ -1,0 +1,12 @@
+{
+  "name": "technical-advisor",
+  "description": "The founder's Technical Advisor, without its shelf.",
+  "owner": { "name": "Timothy Guyon" },
+  "plugins": [
+    {
+      "name": "technical-advisor",
+      "source": "./",
+      "description": "The founder's Technical Advisor alone, its principles without its shelf, as an Agent Skill with a Claude Code agent."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "technical-advisor",
+  "displayName": "Technical Advisor",
+  "description": "The founder's Technical Advisor alone, its principles without its shelf, as an Agent Skill with a Claude Code agent.",
+  "author": { "name": "Timothy Guyon" },
+  "repository": "https://github.com/Timothy-Guyon/technical-advisor",
+  "agents": ["./agents/technical-advisor.md"]
+}
