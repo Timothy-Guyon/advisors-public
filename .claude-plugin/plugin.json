@@ -5,7 +5,7 @@
   "author": {
     "name": "Timothy Guyon"
   },
-  "repository": "https://github.com/Timothy-Guyon/technical-advisor",
+  "repository": "https://github.com/Timothy-Guyon/advisors-public",
   "agents": [
     "./agents/technical-advisor.md"
   ]
