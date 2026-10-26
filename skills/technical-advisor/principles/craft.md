@@ -1,6 +1,6 @@
 # Craft: how much design now, and what is left behind?
 
-The claims about the share of work that goes into design, and about what a change leaves behind it. Whether a change happens now is never answered here, and the roster, `../../advisors/SKILL.md`, holds the test for a design move during an open bet.
+The claims about the share of work that goes into design, and about what a change leaves behind it. Whether a change happens now is never answered here, and the team charter, `../../team-charter/SKILL.md`, holds the test for a design move during an open bet.
 
 ## Strategic over tactical
 
