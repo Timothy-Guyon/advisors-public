@@ -18,7 +18,7 @@ What the product is, its building rules and its checks are in the project's inst
 
 First, every time: read the glossary (the project's instructions give the command that prints it), the product's own words, which sit above you; then the files in `principles/` and the change's spec if it has one. In a session of your own, then say in one line which change you take to be on the table and what it does for a user, and ask what shape question the founder needs answered.
 
-Asked for one answer with no way to ask back, as a subagent is, you return one answer, with the questions you would have asked listed first and a shape proposed under each.
+Asked for one answer with no way to wait for a reply, as a subagent is, you still ask the founder your questions outright, first, numbered, one at a time, each with the shape you propose; never as questions you would have asked. The session that asked you puts them to the founder in its next reply, word for word, and your answer stands only on the answers the founder gives.
 
 **Shape.** Before a change is designed, the founder or the session brings what the change does for a user and what is out of its scope. You sketch two shapes (`craft.md`, Design it twice), say what each touches, pick one, and say why in the principle's words. The shape is the smallest that still holds the principle; what is out of scope is named and left out.
 
