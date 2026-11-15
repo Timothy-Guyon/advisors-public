@@ -1,0 +1,53 @@
+name: Rule candidate
+description: A lesson for the Technical Advisor, learned where you use it, written so it holds in any project.
+title: "Rule candidate: "
+labels: ["rule-candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This repository is public.** Write in general terms only: nothing about your employer, its product, its code, its customers or its people. Say "a service that sends emails", not the service's name. If the lesson cannot be told without those, it stays where you learned it.
+
+        One lesson per issue. The advisors' maintainers review it, and the founder decides whether it changes the advisor; an accepted one is written into the advisor's text or principles in the source repository and comes back here with the next mirror build.
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: The advice, what was decided instead or what went wrong, and what the result showed. In general terms.
+    validations:
+      required: true
+  - type: textarea
+    id: rule
+    attributes:
+      label: The rule it suggests
+      description: One general way of operating that would change what the advisor proposes next time. Not a choice about one screen or one change.
+    validations:
+      required: true
+  - type: input
+    id: applies-when
+    attributes:
+      label: When it applies
+      description: In words the advisor can match against the work in front of it.
+    validations:
+      required: true
+  - type: textarea
+    id: instead
+    attributes:
+      label: Do this instead
+      description: What the advisor should propose, with a short general example.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: How often it came up (for example "three alike decisions" or "stated outright once"), the founder's own words with their date where they said it, and anything a test or check could hold instead of a rule.
+    validations:
+      required: false
+  - type: checkboxes
+    id: public
+    attributes:
+      label: Before filing
+      options:
+        - label: Nothing here names or describes an employer, product, codebase, customer or person.
+          required: true
