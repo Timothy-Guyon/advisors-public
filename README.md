@@ -2,7 +2,7 @@
 
 The founder's Technical Advisor alone, as a Claude Code plugin: its text (`skills/technical-advisor/SKILL.md`), its principles (`skills/technical-advisor/principles/`) and one agent that reads them (`agents/technical-advisor.md`). Its shelf of source texts is left out, since those are copyrighted; each principle still names its source.
 
-This repository is a mirror. Do not change it here: it is rebuilt from the private advisors repository on every change to the Technical Advisor there, and anything changed here is overwritten. Built from commit `117139b`.
+This repository is a mirror. Do not change it here: it is rebuilt from the private advisors repository on every change to the Technical Advisor there, and anything changed here is overwritten. Built from commit `081009d`.
 
 Issues are the exception: they are how a user of this copy sends a lesson back. Open one with the "Rule candidate" template, one lesson per issue, in general terms only, since this repository is public. The skill's last section, "Sending a lesson back", says how a session drafts and files one.
 
