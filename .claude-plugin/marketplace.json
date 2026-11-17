@@ -1,6 +1,6 @@
 {
   "name": "advisors-public",
-  "description": "The founder's Technical Advisor, without its shelf.",
+  "description": "The founder's advisors and working rules, without their shelves.",
   "owner": {
     "name": "Timothy Guyon"
   },
@@ -8,7 +8,7 @@
     {
       "name": "advisors",
       "source": "./",
-      "description": "The founder's Technical Advisor alone, its principles without its shelf, as an Agent Skill with a Claude Code agent."
+      "description": "The founder's Lean, Design and Technical Advisors with their team charter, principles without their shelves."
     }
   ]
 }

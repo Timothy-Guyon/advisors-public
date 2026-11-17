@@ -1,0 +1,21 @@
+{
+  "description": "At a session's start, prints the working rules and how notes on them get back, then what the team charter says is due in the project's records.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/remind.sh\"",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/skills/team-charter/scripts/team.py\" due",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

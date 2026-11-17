@@ -1,12 +1,15 @@
 {
   "name": "advisors",
-  "displayName": "Technical Advisor",
-  "description": "The founder's Technical Advisor alone, its principles without its shelf, as an Agent Skill with a Claude Code agent.",
+  "displayName": "Advisors",
+  "description": "The founder's Lean, Design and Technical Advisors with their team charter, principles without their shelves, as Agent Skills with a Claude Code agent for each.",
   "author": {
     "name": "Timothy Guyon"
   },
   "repository": "https://github.com/Timothy-Guyon/advisors-public",
   "agents": [
+    "./agents/lean-advisor.md",
+    "./agents/design-advisor.md",
     "./agents/technical-advisor.md"
-  ]
+  ],
+  "hooks": "./hooks.json"
 }
