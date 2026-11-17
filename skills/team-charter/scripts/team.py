@@ -54,35 +54,35 @@ shape    fills an idea's user story, riskiest assumption and metric; none of the
 pick     marks the idea that becomes the next bet.
 pass     counts one more pass for each idea passed over at shaping; the third pass archives it.
 archive  moves an idea off the list, with why (a merge says which idea it went into).
-revive   brings an archived idea back: on the founder's asking, on new evidence, or when a new idea matches it;
+revive   brings an archived idea back: on the client's asking, on new evidence, or when a new idea matches it;
          or an idea that waited on a bet, once that bet has closed. It needs a place on the list, and its pass
          count starts again at zero.
 decide   writes a decision to DECISIONS.md: the circumstances, the premise, what each advisor said, the decision
          and the reason, all required. An overrule also needs its prediction: what result would show the
-         advice was right. A pushback is the founder turning an advisor's answer down, changing it or
+         advice was right. A pushback is the client turning an advisor's answer down, changing it or
          questioning it, by a tap or in words; it needs what the advisor conceded (--conceded). Where the advisor
          concedes nothing and holds its advice, it is an overrule, with its prediction. A decision that follows
          an accepted rule names it with --rule.
 settle   closes an open prediction as confirmed, disproved or moot, with a note.
 rule     proposes a rule in RULES.md from three or more similar decisions, with its premise; --stated takes one
-         decision, where the founder stated the general point outright, and needs those words, verbatim
+         decision, where the client stated the general point outright, and needs those words, verbatim
          (--words). A point stated while agreeing to an offer turns no advice down, so it has no decision:
-         --said takes the date the founder said it in place of --from.
-ruling   records the founder's word on a rule: accepted, struck, edited (with --text), or back for a fresh look;
+         --said takes the date the client said it in place of --from.
+ruling   records the client's word on a rule: accepted, struck, edited (with --text), or back for a fresh look;
          on a refresh, kept marks an accepted rule checked and still holding.
 applies  writes when a rule applies, for a rule written before every rule carried it.
 pack     writes each accepted rule as one file with title and applies_when, for a tool that reads rules that way.
-overruled counts an overrule of an accepted rule; the second sends it back to the founder.
+overruled counts an overrule of an accepted rule; the second sends it back to the client.
 review   records a Design Advisor review of a whole screen in REVIEWS.md: the screen, its screenshot, the change
          that added or moved something, what the screen has (--has, from the triggers in the Design Advisor's
          claims), each top-tier item and claim applied, each skipped, each with why, and the verdict. It refuses
          a review that leaves out any of Apple's eight, Nielsen's ten, a claim called for on every screen or a
          claim a trigger in --has calls for.
-miss     records in MISSES.md a problem the founder or a tester met that no review flagged, against the claim that
+miss     records in MISSES.md a problem the client or a tester met that no review flagged, against the claim that
          should have caught it ("none" where no claim covers it), with what the screen does instead (--instead).
 replay   adds a screen with known problems to REPLAY.md: its screenshot, kept in the project, each claim it breaks
          and what the fixed screen does instead.
-due      prints what is due: open predictions, rules waiting on the founder, accepted rules and when each applies,
+due      prints what is due: open predictions, rules waiting on the client, accepted rules and when each applies,
          rules due a refresh, and "shape first"
          when no bet is open and ideas are waiting, a claim missed twice, a miss no claim covers, and any record
          still kept in product/ that belongs in history/ or work/. It prints nothing, and succeeds, where there
@@ -231,7 +231,7 @@ def coined(lines):
 
 def open_coined():
     """The open bet's words, written in BET.md's "Words coined" section in the log's line shape until the bet's retro
-    moves them into its entry (the founder, 2026-10-18); the bet is the one BET.md's status line names."""
+    moves them into its entry (Timmy, 2026-10-18); the bet is the one BET.md's status line names."""
     if not os.path.exists(path('BET.md')):
         return []
     lines = read('BET.md')
@@ -389,7 +389,7 @@ def cmd_glossary(a):
     at = lambda c: '%s line %d' % (c.get('file', 'LOG.md'), c['index'] + 1)
     out = ['# Glossary', '', 'Every word a bet coined, projected from the "Words coined" lines of `LOG.md`, and of `BET.md` '
            'for the open bet; the entries are the record, this is a view. A capital names a thing the app holds or shows; '
-           'lowercase names a part or a fact (founder, 2026-10-07).', '']
+           'lowercase names a part or a fact (Timmy, 2026-10-07).', '']
     by_word = {}
     for c in good:
         by_word.setdefault(c['word'].casefold(), []).append(c)
@@ -450,20 +450,20 @@ TEMPLATES = {
                  'Every idea, with its triage answers, written by `team.py`. At most five are on the list (status listed or '
                  'shaped), ranked; an idea passed over three times is archived.', ''],
     'DECISIONS.md': ['# Decisions', '',
-                     'Every decision the founder made between advisors, or against one, written by `team.py`: the '
+                     'Every decision the client made between advisors, or against one, written by `team.py`: the '
                      'circumstances, the premise, each advisor\'s advice, the decision and the reason. An overrule carries '
                      'its prediction until it is settled; a pushback says what the advisor conceded.', ''],
     'RULES.md': ['# Rules', '',
                  'Rules this project grew from its decisions, written by `team.py`. A rule is proposed from three similar '
-                 'decisions, or from the founder\'s own words stating it outright, quoted with it, says when it applies, and '
-                 'holds only once the founder accepts it; overruled twice, or its premise gone, it goes back to the '
-                 'founder. An accepted rule not checked in 60 days is due a refresh.', ''],
+                 'decisions, or from the client\'s own words stating it outright, quoted with it, says when it applies, and '
+                 'holds only once the client accepts it; overruled twice, or its premise gone, it goes back to the '
+                 'client. An accepted rule not checked in 60 days is due a refresh.', ''],
     'REVIEWS.md': ['# Design reviews', '',
                    'Every review of a whole screen by the Design Advisor, written by `team.py`: what the screen has, the '
                    'top tier and each claim it applied, each it skipped and why, and the verdict. The record a later '
                    'miss is traced against.', ''],
     'MISSES.md': ['# Design misses', '',
-                  'Every problem the founder or a tester met on a screen that no review flagged, written by `team.py`, '
+                  'Every problem the client or a tester met on a screen that no review flagged, written by `team.py`, '
                   'against the claim that should have caught it and with what the screen does instead. A claim missed '
                   'twice is due to be called for on every screen; a miss no claim covers is due a proposed claim.', ''],
     'REPLAY.md': ['# Replay set', '',
@@ -787,25 +787,25 @@ def cmd_rule(a):
     lines = load('RULES.md')
     decisions = load('DECISIONS.md')
     if a.said and not a.stated:
-        fail('--said is for a rule the founder stated outright with no decision (--stated)')
+        fail('--said is for a rule the client stated outright with no decision (--stated)')
     if a.said and a.from_:
         fail('--said is for a stated point with no decision; with a decision, name it with --from instead')
     if not a.from_ and not a.said:
-        fail('--from names the decisions the rule grows from (or --stated --said, for a point the founder stated with no decision)')
+        fail('--from names the decisions the rule grows from (or --stated --said, for a point the client stated with no decision)')
     said = date(a.said) if a.said else None
     try:
         nums = [int(x) for x in (a.from_ or '').split(',') if x.strip()]
     except ValueError:
         fail('--from is decision numbers separated by commas, as 3,5,8')
     if a.stated and not said and len(set(nums)) != 1:
-        fail('--stated names the one decision in which the founder stated the rule; %d named' % len(set(nums)))
+        fail('--stated names the one decision in which the client stated the rule; %d named' % len(set(nums)))
     words = ' '.join((a.words or '').split())
     if a.stated and not words:
-        fail('--stated needs the founder\'s words that state the rule, verbatim (--words)')
+        fail('--stated needs the client\'s words that state the rule, verbatim (--words)')
     if words and not a.stated:
-        fail('--words is for a rule the founder stated (--stated)')
+        fail('--words is for a rule the client stated (--stated)')
     if not a.stated and len(set(nums)) < 3:
-        fail('a rule grows from three or more similar decisions; %d named (or --stated, from one the founder stated outright)' % len(set(nums)))
+        fail('a rule grows from three or more similar decisions; %d named (or --stated, from one the client stated outright)' % len(set(nums)))
     for n in nums:
         find_n(decisions, 'Decision', n, 'DECISIONS.md')
     when = date(a.date)
@@ -817,7 +817,7 @@ def cmd_rule(a):
              '- **From decisions:** %s' % (', '.join(str(x) for x in sorted(set(nums))) if nums
                                           else 'none, stated outright on %s' % said)]
     if words:
-        block.append('- **Stated by the founder:** "%s"' % words)
+        block.append('- **Stated by the client:** "%s"' % words)
     block += ['- **Since:** %s' % when, '- **Overruled:** 0', '- **History:**', '  - %s: proposed' % when]
     append_record(lines, block)
     write('RULES.md', lines, '\n'.join(block))
@@ -889,7 +889,7 @@ def cmd_pack(a):
         body = ['---', 'title: %s' % q(r['title'].rstrip('.')), 'applies_when:', '  - %s' % q(applies.rstrip('.')),
                 'tags: [project-rule]', '---', '', '%s' % r['title'], '',
                 'Premise: %s' % (get(lines, r, 'Premise') or ''),
-                '', 'Rule %d in product/RULES.md, accepted by the founder. Cite it as rule %d.' % (r['n'], r['n'])]
+                '', 'Rule %d in product/RULES.md, accepted by the client. Cite it as rule %d.' % (r['n'], r['n'])]
         with open(os.path.join(out, 'rule-%d.md' % r['n']), 'w', encoding='utf-8') as f:
             f.write('\n'.join(body) + '\n')
         written += 1
@@ -909,8 +909,8 @@ def cmd_overruled(a):
     put(lines, r, 'Overruled', str(count))
     r = refind(lines, r)
     if count >= 2:
-        set_status(lines, r, 'back', when, 'overruled by decision %d, the second time; back to the founder' % a.decision)
-        print('rule %d overruled twice; back to the founder' % a.n)
+        set_status(lines, r, 'back', when, 'overruled by decision %d, the second time; back to the client' % a.decision)
+        print('rule %d overruled twice; back to the client' % a.n)
     else:
         note(lines, r, 'History', '%s: overruled by decision %d' % (when, a.decision))
         print('rule %d overruled once' % a.n)
@@ -1045,7 +1045,7 @@ def cmd_due(a):
         for r in records(lines):
             st = status(lines, r)
             if st in ('proposed', 'back'):
-                out.append('- Waiting on the founder, rule %d (%s): %s' % (r['n'], st, r['title']))
+                out.append('- Waiting on the client, rule %d (%s): %s' % (r['n'], st, r['title']))
         today = datetime.date.today()
         for r in records(lines):
             if status(lines, r) == 'accepted':
@@ -1063,7 +1063,7 @@ def cmd_due(a):
                 continue
             if age >= REFRESH_DAYS:
                 out.append('- Refresh rule %d, last checked %s: does its premise still hold, and does another rule say '
-                           'the same? `ruling %d --as kept`, or `--as back` to the founder.' % (r['n'], last, r['n']))
+                           'the same? `ruling %d --as kept`, or `--as back` to the client.' % (r['n'], last, r['n']))
     if os.path.exists(path('IDEAS.md')):
         lines = read('IDEAS.md')
         bet_open = os.path.exists(path('BET.md')) and any(OPEN.match(l) for l in read('BET.md'))
@@ -1091,7 +1091,7 @@ def cmd_due(a):
                 counts[c] = counts.get(c, 0) + 1
         for c, k in sorted(counts.items()):
             if k >= 2:
-                out.append('- Claim "%s" missed %d times: propose to the founder that it is called for on every '
+                out.append('- Claim "%s" missed %d times: propose to the client that it is called for on every '
                            'screen.' % (c, k))
     stray = sorted(n for n in HOMES if os.path.exists(os.path.join(ROOT, n)))
     if stray:
@@ -1194,15 +1194,15 @@ def main(argv=None):
     k.add_argument('n', type=int); k.add_argument('--as', dest='as_', choices=('confirmed', 'disproved', 'moot'), required=True)
     k.add_argument('--note', required=True); k.add_argument('--date', required=True)
     k.set_defaults(run=cmd_settle)
-    k = sub.add_parser('rule', help='propose a rule from three or more decisions, or one the founder stated (--stated)')
+    k = sub.add_parser('rule', help='propose a rule from three or more decisions, or one the client stated (--stated)')
     k.add_argument('text'); k.add_argument('--premise', required=True)
     k.add_argument('--applies-when', required=True, help='when the rule applies, so an advisor knows when to follow it')
     k.add_argument('--from', dest='from_'); k.add_argument('--date', required=True)
-    k.add_argument('--stated', action='store_true', help='from one decision in which the founder stated the rule outright')
-    k.add_argument('--words', help='with --stated: the founder\'s words that state the rule, verbatim')
-    k.add_argument('--said', help='with --stated and no --from: the date the founder said it, where no decision holds it')
+    k.add_argument('--stated', action='store_true', help='from one decision in which the client stated the rule outright')
+    k.add_argument('--words', help='with --stated: the client\'s words that state the rule, verbatim')
+    k.add_argument('--said', help='with --stated and no --from: the date the client said it, where no decision holds it')
     k.set_defaults(run=cmd_rule)
-    k = sub.add_parser('ruling', help='record the founder\'s word on a rule')
+    k = sub.add_parser('ruling', help='record the client\'s word on a rule')
     k.add_argument('n', type=int)
     k.add_argument('--as', dest='as_', choices=('accepted', 'struck', 'edited', 'back', 'kept'), required=True)
     k.add_argument('--note', required=True); k.add_argument('--date', required=True); k.add_argument('--text')

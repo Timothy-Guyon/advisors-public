@@ -8,7 +8,7 @@ body:
       value: |
         **This repository is public.** Write in general terms only: nothing about your employer, its product, its code, its customers or its people. Say "a service that sends emails", not the service's name. If the lesson cannot be told without those, it stays where you learned it.
 
-        One lesson per issue. The advisors' maintainers review it, and the founder decides whether it changes the advisor; an accepted one is written into the advisor's text or principles in the source repository and comes back here with the next mirror build.
+        One lesson per issue. The advisors' maintainers review it, and Timmy decides whether it changes the advisor; an accepted one is written into the advisor's text or principles in the source repository and comes back here with the next mirror build.
   - type: textarea
     id: happened
     attributes:
@@ -41,7 +41,7 @@ body:
     id: evidence
     attributes:
       label: Evidence
-      description: How often it came up (for example "three alike decisions" or "stated outright once"), the founder's own words with their date where they said it, and anything a test or check could hold instead of a rule.
+      description: How often it came up (for example "three alike decisions" or "stated outright once"), the client's own words with their date where they said it, and anything a test or check could hold instead of a rule.
     validations:
       required: false
   - type: checkboxes

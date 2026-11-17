@@ -1,6 +1,6 @@
 {
   "name": "timmys-tools-public",
-  "description": "The founder's advisors and working rules, without their shelves.",
+  "description": "Timmy's Tools, public copy: the advisors, working rules and writing-voice skill, without the private parts.",
   "owner": {
     "name": "Timothy Guyon"
   },
@@ -8,7 +8,7 @@
     {
       "name": "timmys-tools",
       "source": "./",
-      "description": "The founder's Lean, Design and Technical Advisors with their team charter, principles without their shelves."
+      "description": "Three advisors for building a product, the rules for working with Timmy, and a skill that writes in Timmy's voice."
     }
   ]
 }

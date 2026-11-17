@@ -1,6 +1,6 @@
 # Current bet
 
-Read this before planning any work. One bet at a time. It is a draft until the founder opens it, it closes on an event, not a date, and nothing else gets built until it closes.
+Read this before planning any work. One bet at a time. It is a draft until the client opens it, it closes on an event, not a date, and nothing else gets built until it closes.
 
 - **Status:** no bet open.
 - **Bet:** none yet.
@@ -22,6 +22,6 @@ Keep the three status lines above to one short line each, under 300 characters. 
 
 ## Words coined
 
-The open bet's words, in the writer's line shape, written on the founder's word; they move into the bet's entry in `history/LOG.md` at its retro.
+The open bet's words, in the writer's line shape, written on the client's word; they move into the bet's entry in `history/LOG.md` at its retro.
 
 - **Words coined:**

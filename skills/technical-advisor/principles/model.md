@@ -84,7 +84,7 @@ The claims about the kinds of thing in the domain, and about what is data rather
 
 ## Facts are data
 
-**What the domain says is data, written by its own method, and code holds no copy of it.** A fact about the domain is data, not a line of code: it is written where its kind of fact is written, by the method that checks it, and code reads it. Check: does this change put a fact about the domain into code? Sources: the founder's rule, 2026-10-13; Hunt and Thomas, topic 14, Domain Languages.
+**What the domain says is data, written by its own method, and code holds no copy of it.** A fact about the domain is data, not a line of code: it is written where its kind of fact is written, by the method that checks it, and code reads it. Check: does this change put a fact about the domain into code? Sources: the client's rule, 2026-10-13; Hunt and Thomas, topic 14, Domain Languages.
 
 ## Knowledge level
 
@@ -112,7 +112,7 @@ The claims about the kinds of thing in the domain, and about what is data rather
 
 ## Nothing stands in for an unsettled rule
 
-**Where the domain has not settled a rule, the code holds nothing in its place.** The people who know the domain carry rules that contradict each other and fill the gaps by feel; code cannot. A rule is settled before it is coded, and where it is not, the change names the gap as out of scope rather than shipping a default or a branch that guesses. Check: does any default or branch in this change stand in for a rule the founder has not settled, and is the gap named? Source: Evans, chapter 1, Crunching Knowledge, Knowledge Rich Design.
+**Where the domain has not settled a rule, the code holds nothing in its place.** The people who know the domain carry rules that contradict each other and fill the gaps by feel; code cannot. A rule is settled before it is coded, and where it is not, the change names the gap as out of scope rather than shipping a default or a branch that guesses. Check: does any default or branch in this change stand in for a rule the client has not settled, and is the gap named? Source: Evans, chapter 1, Crunching Knowledge, Knowledge Rich Design.
 
 ## Walk the scenario
 
