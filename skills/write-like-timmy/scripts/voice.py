@@ -6,9 +6,9 @@ Every session that drafts as Timmy logs a note here each time he picks between
 two drafts, edits one, or says something about how a draft sounds. Three alike
 become a rule he approves (see "How the voice grows" in SKILL.md).
 
-Only the lesson is logged, never the message: what the draft did, what Timmy
-did instead, and at most a short fragment of each with names taken out. His
-messages stay where they were written.
+Only the lesson is logged, never the writing itself: what the draft did, what
+Timmy did instead, and at most a short fragment of each with names taken out.
+His writing stays where it was written.
 
 Plain Markdown, one entry per note. The log is found at $TIMMY_VOICE_LOG if
 set, else at voice/LOG.md of the mailbox repo (Timothy-Guyon/claude-shared)
@@ -17,12 +17,12 @@ beside or above the current folder or this script, else at
 mailbox). Push the mailbox's log straight to its main.
 
   voice.py status                      how many drafts to show, and what is due
-  voice.py note --kind pick|edit|said --for "kind of message" --draft "what the draft did"
+  voice.py note --kind pick|edit|said --for "kind of writing" --draft "what the draft did"
                 --timmy "what he chose, changed or said" [--before "..." --after "..."] [--date YYYY-MM-DD]
   voice.py open                        notes not yet counted toward a rule
   voice.py used 3,7,9 --rule 8         mark notes as counted toward rule 8 (or --rule struck)
   voice.py check --with N --without N [--ties N] [--note "..."]
-                                       record a check against his real messages (check.md)
+                                       record a check against his real writing (check.md)
 """
 import argparse
 import datetime
@@ -53,7 +53,7 @@ LOG, SHARED = find_log()
 HEADER = """# Timmy's voice: the log
 
 Every pick, edit or remark Timmy makes on a draft written as him, one note each: what the draft did and what he did instead.
-Only the lesson is kept, never the message, and no names.
+Only the lesson is kept, never the writing itself, and no names.
 Written only by `voice.py` in the `write-like-timmy` skill of Timmy's Tools; see "How the voice grows" in its `SKILL.md`.
 A note with `Rule: open` still counts toward a new rule; one with a rule number or `struck` is done.
 """
@@ -85,7 +85,7 @@ def need(value, name, limit=None):
         sys.exit("refused: --%s must be one line" % name)
     value = value.strip()
     if limit and len(value) > limit:
-        sys.exit("refused: --%s is over %d characters; log the lesson, not the message" % (name, limit))
+        sys.exit("refused: --%s is over %d characters; log the lesson, not the writing" % (name, limit))
     return value
 
 
@@ -169,9 +169,9 @@ def check(a):
         if getattr(a, name) < 0:
             sys.exit("refused: counts can't be negative")
     if a.with_ + a.without + a.ties == 0:
-        sys.exit("refused: a check compares at least one message")
+        sys.exit("refused: a check compares at least one piece")
     lines = [
-        "Closer to his real message: with the voice %d, without it %d, ties %d" % (a.with_, a.without, a.ties),
+        "Closer to his real writing: with the voice %d, without it %d, ties %d" % (a.with_, a.without, a.ties),
         "Rules in voice.md: %d" % rules_now(),
     ]
     if a.note:
@@ -195,12 +195,12 @@ def status(a):
     checks = [b for _, b in all_ if "\nRule: check" in b]
     now = rules_now()
     if not checks:
-        print("Last check: none yet. Rules in voice.md: %d. Run one where his real messages can be read (check.md)." % now)
+        print("Last check: none yet. Rules in voice.md: %d. Run one where his real writing can be read (check.md)." % now)
     else:
         last = checks[-1].strip().splitlines()
         then = re.search(r"\nRules in voice.md: (\d+)", checks[-1])
         added = now - int(then.group(1)) if then else 0
-        due = "; a check is due where his real messages can be read (check.md)" if added >= CHECK_DUE_AFTER else ""
+        due = "; a check is due where his real writing can be read (check.md)" if added >= CHECK_DUE_AFTER else ""
         print("Last check: %s. %s. Rules added since: %d%s." % (last[0].split(". ", 1)[1].split(",")[0], last[1], added, due))
     print("Log: %s%s" % (LOG, "" if SHARED else " (this place only; lessons travel as SKILL.md says under \"Without the mailbox\")"))
 
@@ -212,7 +212,7 @@ def main():
     s.set_defaults(fn=status)
     n = sub.add_parser("note", help="log one pick, edit or remark of Timmy's")
     n.add_argument("--kind", choices=["pick", "edit", "said"], required=True)
-    n.add_argument("--for", dest="to", required=True, help="the kind of message, with no names: 'text to a friend'")
+    n.add_argument("--for", dest="to", required=True, help="the kind of writing, with no names: 'text to a friend', 'document for work'")
     n.add_argument("--draft", required=True, help="what the draft did")
     n.add_argument("--timmy", required=True, help="what he chose or changed; for said, his own words")
     n.add_argument("--before", help="a short fragment of the draft, names taken out")
@@ -225,7 +225,7 @@ def main():
     u.add_argument("notes", help="note numbers, comma-separated")
     u.add_argument("--rule", required=True)
     u.set_defaults(fn=used)
-    c = sub.add_parser("check", help="record a check against his real messages")
+    c = sub.add_parser("check", help="record a check against his real writing")
     c.add_argument("--with", dest="with_", type=int, required=True, help="pairs where the draft written with voice.md was closer")
     c.add_argument("--without", type=int, required=True, help="pairs where the draft written without it was closer")
     c.add_argument("--ties", type=int, default=0, help="pairs where the judge flipped when the order was swapped")

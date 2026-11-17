@@ -1,6 +1,6 @@
 # Timmy's voice
 
-How Timmy sounds in anything that goes out under his name. Read all of it before drafting as him. Only Timmy adds, changes or strikes a line here; `SKILL.md` says how, under "How the voice grows".
+How Timmy sounds in anything he puts his name to, not only messages: "It could be for writing anything, like documents for work, social media posts, messages, whatever" (2026-11-17). Read all of it before drafting as him. Only Timmy adds, changes or strikes a line here; `SKILL.md` says how, under "How the voice grows".
 
 His past writing is raw material, not the target: "we shouldn't treat my past messages as the precise target for the voice we're building" (2026-11-17). Asked whether a draft should match what he has written or follow his reactions to drafts, he said "it should be both". So a draft should read as his, and where a rule below pulls away from an old habit of his, the rule wins.
 
@@ -12,12 +12,12 @@ In his words (2026-11-17):
 
 ## The rules
 
-Each rule says what to do, what it replaces, and where it came from. The "not this" and "this" lines are made-up illustrations, not his messages.
+Each rule says what to do, what it replaces, and where it came from. The "not this" and "this" lines are made-up illustrations, not his own writing.
 
-1. **One voice everywhere.** The same person writes the text to a friend, the email to a recruiter and the public post. The reader and the medium change how long it is and how much is spelled out, never who is talking.
+1. **One voice everywhere.** The same person writes the text to a friend, the email to a recruiter, the public post and the document for work. The reader and the medium change how long it is, how it is laid out and how much is spelled out, never who is talking.
    Not this: a stiff, formal Timmy at work and a loose, rambling one with friends.
-   This: the work email and the text could be read side by side and sound like one person on the same day.
-   *Stated 2026-11-17: "a little bit more consistent across different contexts".*
+   This: the work document and the text could be read side by side and sound like one person on the same day.
+   *Stated 2026-11-17: "a little bit more consistent across different contexts", and the same day, "writing anything, like documents for work, social media posts, messages, whatever".*
 
 2. **Clear, warm, confident.** Clear: the point comes first, in plain words. Warm: one friendly line he would really say, where it fits. Confident: he says what he wants or thinks, with no stack of hedges or apologies.
    Not this: "Sorry to bother you, I was just wondering if it might maybe be possible to move our call?"
@@ -46,7 +46,7 @@ Each rule says what to do, what it replaces, and where it came from. The "not th
 
 ## Seen in his writing
 
-Habits found in his own messages: his sent email (the latest 50 threads) and a month of dictated messages on his Mac, read in November 2026. These are things he has done, not things to do. Use one only where it would come by itself; a draft stuffed with them is a caricature of him, which is worse than a plain draft. Where a habit and a rule disagree, the rule wins.
+Habits found in his own messages: his sent email (the latest 50 threads) and a month of dictated messages on his Mac, read in November 2026. These are things he has done, not things to do. They all come from messages, so they say little about how he writes a document or a post. Use one only where it would come by itself; a draft stuffed with them is a caricature of him, which is worse than a plain draft. Where a habit and a rule disagree, the rule wins.
 
 - **Short.** Most replies are one or two sentences, and a yes is often a single line.
 - **Straight to it.** Texts carry no greeting and no sign-off. Emails often open "Hi!", "Hello!" or "Howdy," and close "Thanks," or "Cheers," over "Timmy" (now and then "Tim").
@@ -58,4 +58,4 @@ Habits found in his own messages: his sent email (the latest 50 threads) and a m
 
 ## Examples
 
-None approved yet. An example is one of his real messages, added only on his word, and for each he says whether it may ship in the public copy of this skill. Public ones go here; the rest go in `voice/examples.md` of the mailbox repo (`Timothy-Guyon/claude-shared`) and are read from there where it can be reached.
+None approved yet. An example is one of his real pieces, a message, a post or a passage of a document, added only on his word, and for each he says whether it may ship in the public copy of this skill. Public ones go here; the rest go in `voice/examples.md` of the mailbox repo (`Timothy-Guyon/claude-shared`) and are read from there where it can be reached.
