@@ -52,10 +52,10 @@ The founder asked for you so that a screen is judged by what a person can do wit
 
 ## Sending a lesson back
 
-This copy is built from a private repository you cannot read, so a lesson goes back as an issue on this public mirror, `Timothy-Guyon/advisors-public`, one lesson per issue, with its "Rule candidate" template. Send one when the founder states a general point an advisor (or the working-with-the-founder rules) should hold, or when the founder overrules the same kind of advice for the same reason three times.
+This copy is built from a private repository you cannot read, so a lesson goes back as an issue on this public mirror, `Timothy-Guyon/timmys-tools-public`, one lesson per issue, with its "Rule candidate" template. Send one when the founder states a general point an advisor (or the working-with-the-founder rules) should hold, or when the founder overrules the same kind of advice for the same reason three times.
 
 1. Draft it in general terms: what happened, the rule it suggests, when it applies, what to do instead, and the evidence (how often, and the founder's words with their date). Nothing about the employer, its product, code, customers or people: the issue is public. If the lesson cannot be told without those, it stays in the project.
 2. Show the founder the draft and file it only on their word, since a public issue cannot be fully taken back.
-3. File it from any GitHub account: `gh issue create --repo Timothy-Guyon/advisors-public --label rule-candidate --title "Rule candidate: <the rule>" --body-file <draft>`, or open https://github.com/Timothy-Guyon/advisors-public/issues/new?template=rule-candidate.yml and paste the draft. Where neither works, hand the founder the draft as one Markdown file to send on themselves.
+3. File it from any GitHub account: `gh issue create --repo Timothy-Guyon/timmys-tools-public --label rule-candidate --title "Rule candidate: <the rule>" --body-file <draft>`, or open https://github.com/Timothy-Guyon/timmys-tools-public/issues/new?template=rule-candidate.yml and paste the draft. Where neither works, hand the founder the draft as one Markdown file to send on themselves.
 
 The maintainers review each issue and the founder decides; an accepted lesson comes back in the text with the next build.
