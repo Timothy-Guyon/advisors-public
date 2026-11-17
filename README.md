@@ -2,7 +2,7 @@
 
 The founder's advisors as a Claude Code plugin: the Lean, Design and Technical Advisors with their team charter (`skills/`), one agent for each (`agents/`), a session-start hook that prints what the charter says is due, and the rules every session follows when working with the founder (`rules/AGENTS.md`). The advisors' shelves of source texts are left out, since those are copyrighted; each principle still names its source.
 
-This repository is a mirror. Do not change it here: it is rebuilt from a private repository on every change there, and anything changed here is overwritten. Built from commit `fc502e1`.
+This repository is a mirror. Do not change it here: it is rebuilt from a private repository on every change there, and anything changed here is overwritten. Built from commit `b59e9b3`.
 
 Issues are the exception: they are how a user of this copy sends a lesson back. Open one with the "Rule candidate" template, one lesson per issue, in general terms only, since this repository is public. Each advisor's skill ends with "Sending a lesson back", which says how a session drafts and files one.
 
